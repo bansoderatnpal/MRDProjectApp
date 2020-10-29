@@ -10,6 +10,7 @@ namespace MyGitProj.ViewModels
 
         public int DemoId { get; set; }
         public string DemoName { get; set; }
+        public string DemoAddress{get;set;}
 
     }
 }
