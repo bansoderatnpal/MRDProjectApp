@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Qualification
+    public partial class Counrty
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Qualification()
+        public Counrty()
         {
-            this.AddDoctrsDetails = new HashSet<AddDoctrsDetail>();
+            this.Tasks = new HashSet<Task>();
         }
     
-        public int QualificationID { get; set; }
-        public string QualificationName { get; set; }
+        public int CountryId { get; set; }
+        public string CountryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AddDoctrsDetail> AddDoctrsDetails { get; set; }
+        public virtual ICollection<Task> Tasks { get; set; }
     }
 }

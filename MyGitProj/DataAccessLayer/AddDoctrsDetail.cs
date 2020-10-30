@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
@@ -30,11 +30,9 @@ namespace MyGitProj.DAL
         public Nullable<int> SpecializationID { get; set; }
         public Nullable<int> ProuctId { get; set; }
     
-        public virtual City City { get; set; }
         public virtual SelectProduct SelectProduct { get; set; }
         public virtual Qualification Qualification { get; set; }
         public virtual Specialization Specialization { get; set; }
-        public virtual State State { get; set; }
         public virtual StateHQ StateHQ { get; set; }
     }
 }

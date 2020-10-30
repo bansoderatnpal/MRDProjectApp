@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Data.Entity;
@@ -28,17 +28,17 @@ namespace MyGitProj.DAL
         public virtual DbSet<AddDoctrsDetail> AddDoctrsDetails { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Counrty> Counrties { get; set; }
         public virtual DbSet<MruserLogin> MruserLogins { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Qualification> Qualifications { get; set; }
         public virtual DbSet<SelectProduct> SelectProducts { get; set; }
         public virtual DbSet<Specialization> Specializations { get; set; }
-        public virtual DbSet<State> States { get; set; }
         public virtual DbSet<StateHQ> StateHQs { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
+        public virtual DbSet<Citie_table> Citie_table { get; set; }
+        public virtual DbSet<State_table> State_table { get; set; }
         public virtual DbSet<UserRegestraion> UserRegestraions { get; set; }
     }
 }

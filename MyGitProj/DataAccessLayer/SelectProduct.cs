@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class SelectProduct
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City()
+        public SelectProduct()
         {
             this.AddDoctrsDetails = new HashSet<AddDoctrsDetail>();
-            this.UserRegestraions = new HashSet<UserRegestraion>();
         }
     
-        public int CityID { get; set; }
-        public string CityName { get; set; }
+        public int ProuctId { get; set; }
+        public string ProductName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AddDoctrsDetail> AddDoctrsDetails { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserRegestraion> UserRegestraions { get; set; }
     }
 }

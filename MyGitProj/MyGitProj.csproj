@@ -131,88 +131,88 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MrUserController.cs" />
-    <Compile Include="DAL\AddDoctrsDetail.cs">
+    <Compile Include="DataAccessLayer\AddDoctrsDetail.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Admin.cs">
+    <Compile Include="DataAccessLayer\Admin.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Category.cs">
+    <Compile Include="DataAccessLayer\Category.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\City.cs">
+    <Compile Include="DataAccessLayer\Citie_table.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Counrty.cs">
+    <Compile Include="DataAccessLayer\Counrty.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\MRD.Context.cs">
+    <Compile Include="DataAccessLayer\MRD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MRD.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\MRD.cs">
+    <Compile Include="DataAccessLayer\MRD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\MRD.Designer.cs">
+    <Compile Include="DataAccessLayer\MRD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MRD.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\MruserLogin.cs">
+    <Compile Include="DataAccessLayer\MruserLogin.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Product.cs">
+    <Compile Include="DataAccessLayer\Product.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Qualification.cs">
+    <Compile Include="DataAccessLayer\Qualification.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\SelectProduct.cs">
+    <Compile Include="DataAccessLayer\SelectProduct.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Specialization.cs">
+    <Compile Include="DataAccessLayer\Specialization.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\State.cs">
+    <Compile Include="DataAccessLayer\StateHQ.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\StateHQ.cs">
+    <Compile Include="DataAccessLayer\State_table.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Task.cs">
+    <Compile Include="DataAccessLayer\Task.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Territory.cs">
+    <Compile Include="DataAccessLayer\Territory.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\UserRegestraion.cs">
+    <Compile Include="DataAccessLayer\UserRegestraion.cs">
       <DependentUpon>MRD.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceLayer\IAllReopository.cs" />
-    <Compile Include="ServiceLayer\IAllRepositoryImplimantaion.cs" />
-    <Compile Include="ViewModels\AdminLogin.cs" />
-    <Compile Include="ViewModels\Demo.cs" />
-    <Compile Include="ViewModels\MRUserLogin.cs" />
-    <Compile Include="ViewModels\MrUserRegViewModel.cs" />
+    <Compile Include="ServiceLayer\IAllRepository.cs" />
+    <Compile Include="ServiceLayer\_IAllRepositoryBusinessLogic.cs" />
+    <Compile Include="DomainViewModel\AdminLogin.cs" />
+    <Compile Include="DomainViewModel\Demo.cs" />
+    <Compile Include="DomainViewModel\MRUserLogin.cs" />
+    <Compile Include="DomainViewModel\MrUserRegViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DAL\MRD.Context.tt">
+    <Content Include="DataAccessLayer\MRD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MRD.Context.cs</LastGenOutput>
       <DependentUpon>MRD.edmx</DependentUpon>
     </Content>
-    <Content Include="DAL\MRD.tt">
+    <Content Include="DataAccessLayer\MRD.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MRD.edmx</DependentUpon>
       <LastGenOutput>MRD.cs</LastGenOutput>
@@ -223,11 +223,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="DAL\MRD.edmx">
+    <EntityDeploy Include="DataAccessLayer\MRD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MRD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DAL\MRD.edmx.diagram">
+    <Content Include="DataAccessLayer\MRD.edmx.diagram">
       <DependentUpon>MRD.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

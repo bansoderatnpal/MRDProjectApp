@@ -7,19 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Task
+    public partial class Admin
     {
-        public int TaskId { get; set; }
-        public string Emial { get; set; }
-        public string Gender { get; set; }
-        public Nullable<bool> IsActive { get; set; }
-        public Nullable<int> CountryId { get; set; }
-    
-        public virtual Counrty Counrty { get; set; }
+        public int AdminId { get; set; }
+        public string AdminName { get; set; }
+        public string Password { get; set; }
     }
 }

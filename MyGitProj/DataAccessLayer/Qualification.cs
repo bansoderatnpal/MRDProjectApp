@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Specialization
+    public partial class Qualification
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Specialization()
+        public Qualification()
         {
             this.AddDoctrsDetails = new HashSet<AddDoctrsDetail>();
         }
     
-        public int SpecializationID { get; set; }
-        public string SpecializationName { get; set; }
+        public int QualificationID { get; set; }
+        public string QualificationName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AddDoctrsDetail> AddDoctrsDetails { get; set; }

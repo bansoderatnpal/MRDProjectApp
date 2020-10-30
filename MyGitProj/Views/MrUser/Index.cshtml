@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyGitProj.DAL.UserRegestraion>
+﻿@model IEnumerable<MyGitProj.ViewModels.MrUserRegViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -11,6 +11,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RegId)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.UserFirstName)
         </th>
@@ -33,16 +36,19 @@
             @Html.DisplayNameFor(model => model.ZipCode)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.City.CityName)
+            @Html.DisplayNameFor(model => model.StateID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.State.StateName)
+            @Html.DisplayNameFor(model => model.CityID)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegId)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.UserFirstName)
         </td>
@@ -65,15 +71,15 @@
             @Html.DisplayFor(modelItem => item.ZipCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.City.CityName)
+            @Html.DisplayFor(modelItem => item.StateID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.State.StateName)
+            @Html.DisplayFor(modelItem => item.CityID)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RegId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RegId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RegId })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

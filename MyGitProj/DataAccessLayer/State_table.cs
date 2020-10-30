@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyGitProj.DAL
+namespace MyGitProj.DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Counrty
+    public partial class State_table
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Counrty()
+        public State_table()
         {
-            this.Tasks = new HashSet<Task>();
+            this.UserRegestraions = new HashSet<UserRegestraion>();
         }
     
-        public int CountryId { get; set; }
-        public string CountryName { get; set; }
+        public int StateId { get; set; }
+        public string StateName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<UserRegestraion> UserRegestraions { get; set; }
     }
 }

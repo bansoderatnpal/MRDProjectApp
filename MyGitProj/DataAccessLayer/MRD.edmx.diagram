@@ -8,28 +8,26 @@
         <EntityTypeShape EntityType="MrdDBModel.AddDoctrsDetail" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Category" Width="1.5" PointX="8.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MrdDBModel.City" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Counrty" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.MruserLogin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Product" Width="1.5" PointX="11" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Qualification" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.SelectProduct" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Specialization" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MrdDBModel.State" Width="1.5" PointX="0.75" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.StateHQ" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Task" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MrdDBModel.Territory" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MrdDBModel.UserRegestraion" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
-        <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__CityI__75A278F5" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__Prouc__787EE5A0" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__Quali__76969D2E" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__Speci__778AC167" ManuallyRouted="false" />
-        <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__State__73BA3083" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__State__74AE54BC" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__Product__Categor__46B27FE2" ManuallyRouted="false" />
-        <AssociationConnector Association="MrdDBModel.FK__UserReges__CityI__5224328E" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__Task__CountryId__17F790F9" ManuallyRouted="false" />
-        <AssociationConnector Association="MrdDBModel.FK__UserReges__State__51300E55" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MrdDBModel.Citie_table" Width="1.5" PointX="3.75" PointY="11.25" />
+        <EntityTypeShape EntityType="MrdDBModel.State_table" Width="1.5" PointX="7.75" PointY="8.875" />
+        <EntityTypeShape EntityType="MrdDBModel.UserRegestraion" Width="1.5" PointX="10.625" PointY="9.25" />
+        <AssociationConnector Association="MrdDBModel.FK__UserReges__CityI__6442E2C9" />
+        <AssociationConnector Association="MrdDBModel.FK__UserReges__State__634EBE90" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
