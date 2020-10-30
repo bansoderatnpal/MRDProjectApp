@@ -1,4 +1,4 @@
-﻿using MyGitProj.DAL;
+﻿using MyGitProj.DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +18,8 @@ namespace MyGitProj.ViewModels
         public string ZipCode { get; set; }
         public int StateID { get; set; }
         public int CityID { get; set; }
-
-        public virtual City City { get; set; }
-        public virtual State State { get; set; }
+        public virtual Citie_table Citie_table { get; set; }
+        public virtual State_table State_table { get; set; }
 
     }
 }
