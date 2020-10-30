@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,24 +128,108 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MrUserController.cs" />
+    <Compile Include="DAL\AddDoctrsDetail.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Admin.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Category.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\City.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Counrty.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MRD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MRD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MRD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MRD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MRD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MruserLogin.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Product.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Qualification.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SelectProduct.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Specialization.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\State.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\StateHQ.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Task.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Territory.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserRegestraion.cs">
+      <DependentUpon>MRD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceLayer\IAllReopository.cs" />
+    <Compile Include="ServiceLayer\IAllRepositoryImplimantaion.cs" />
+    <Compile Include="ViewModels\AdminLogin.cs" />
     <Compile Include="ViewModels\Demo.cs" />
+    <Compile Include="ViewModels\MRUserLogin.cs" />
+    <Compile Include="ViewModels\MrUserRegViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DAL\MRD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MRD.Context.cs</LastGenOutput>
+      <DependentUpon>MRD.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\MRD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MRD.edmx</DependentUpon>
+      <LastGenOutput>MRD.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="DAL\MRD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MRD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\MRD.edmx.diagram">
+      <DependentUpon>MRD.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -163,10 +255,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MrUser\Index.cshtml" />
+    <Content Include="Views\MrUser\UserReg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -180,6 +274,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

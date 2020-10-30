@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MrdDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AddDoctrsDetails">
+          <Key>
+            <PropertyRef Name="DoctorId" />
+          </Key>
+          <Property Name="DoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Pincode" Type="varchar" MaxLength="50" />
+          <Property Name="MoblieNo" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="StateHqID" Type="int" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="QualificationID" Type="int" />
+          <Property Name="SpecializationID" Type="int" />
+          <Property Name="ProuctId" Type="int" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Counrty">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MruserLogin">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" />
+          <Property Name="Disctption" Type="varchar" MaxLength="50" />
+          <Property Name="GST" Type="float" />
+          <Property Name="Sock" Type="int" />
+          <Property Name="MRP" Type="float" />
+          <Property Name="CREATEDDATE" Type="date" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="CategoryId" Type="int" />
+        </EntityType>
+        <EntityType Name="Qualification">
+          <Key>
+            <PropertyRef Name="QualificationID" />
+          </Key>
+          <Property Name="QualificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QualificationName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SelectProduct">
+          <Key>
+            <PropertyRef Name="ProuctId" />
+          </Key>
+          <Property Name="ProuctId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Specialization">
+          <Key>
+            <PropertyRef Name="SpecializationID" />
+          </Key>
+          <Property Name="SpecializationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SpecializationName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StateHQ">
+          <Key>
+            <PropertyRef Name="StateHqID" />
+          </Key>
+          <Property Name="StateHqID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Emial" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CountryId" Type="int" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="TerritoryID" />
+          </Key>
+          <Property Name="TerritoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TerritoryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserRegestraion">
+          <Key>
+            <PropertyRef Name="RegId" />
+          </Key>
+          <Property Name="RegId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserFirstName" Type="varchar" MaxLength="50" />
+          <Property Name="UserLastName" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="PhomeNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="CityID" Type="int" />
+        </EntityType>
+        <Association Name="FK__AddDoctrs__CityI__75A278F5">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Prouc__787EE5A0">
+          <End Role="SelectProduct" Type="Self.SelectProduct" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SelectProduct">
+              <PropertyRef Name="ProuctId" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="ProuctId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Quali__76969D2E">
+          <End Role="Qualification" Type="Self.Qualification" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Qualification">
+              <PropertyRef Name="QualificationID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="QualificationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Speci__778AC167">
+          <End Role="Specialization" Type="Self.Specialization" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Specialization">
+              <PropertyRef Name="SpecializationID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="SpecializationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__State__73BA3083">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__State__74AE54BC">
+          <End Role="StateHQ" Type="Self.StateHQ" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StateHQ">
+              <PropertyRef Name="StateHqID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="StateHqID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Categor__46B27FE2">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__CountryId__17F790F9">
+          <End Role="Counrty" Type="Self.Counrty" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counrty">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserReges__CityI__5224328E">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="UserRegestraion" Type="Self.UserRegestraion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="UserRegestraion">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserReges__State__51300E55">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="UserRegestraion" Type="Self.UserRegestraion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="UserRegestraion">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MrdDBModelStoreContainer">
+          <EntitySet Name="AddDoctrsDetails" EntityType="Self.AddDoctrsDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Counrty" EntityType="Self.Counrty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MruserLogin" EntityType="Self.MruserLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Qualification" EntityType="Self.Qualification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SelectProduct" EntityType="Self.SelectProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Specialization" EntityType="Self.Specialization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StateHQ" EntityType="Self.StateHQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Territory" EntityType="Self.Territory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRegestraion" EntityType="Self.UserRegestraion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__AddDoctrs__CityI__75A278F5" Association="Self.FK__AddDoctrs__CityI__75A278F5">
+            <End Role="City" EntitySet="City" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Prouc__787EE5A0" Association="Self.FK__AddDoctrs__Prouc__787EE5A0">
+            <End Role="SelectProduct" EntitySet="SelectProduct" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Quali__76969D2E" Association="Self.FK__AddDoctrs__Quali__76969D2E">
+            <End Role="Qualification" EntitySet="Qualification" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Speci__778AC167" Association="Self.FK__AddDoctrs__Speci__778AC167">
+            <End Role="Specialization" EntitySet="Specialization" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__State__73BA3083" Association="Self.FK__AddDoctrs__State__73BA3083">
+            <End Role="State" EntitySet="State" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__State__74AE54BC" Association="Self.FK__AddDoctrs__State__74AE54BC">
+            <End Role="StateHQ" EntitySet="StateHQ" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Categor__46B27FE2" Association="Self.FK__Product__Categor__46B27FE2">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__CountryId__17F790F9" Association="Self.FK__Task__CountryId__17F790F9">
+            <End Role="Counrty" EntitySet="Counrty" />
+            <End Role="Task" EntitySet="Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserReges__CityI__5224328E" Association="Self.FK__UserReges__CityI__5224328E">
+            <End Role="City" EntitySet="City" />
+            <End Role="UserRegestraion" EntitySet="UserRegestraion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserReges__State__51300E55" Association="Self.FK__UserReges__State__51300E55">
+            <End Role="State" EntitySet="State" />
+            <End Role="UserRegestraion" EntitySet="UserRegestraion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MrdDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AddDoctrsDetail">
+          <Key>
+            <PropertyRef Name="DoctorId" />
+          </Key>
+          <Property Name="DoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pincode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MoblieNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="StateHqID" Type="Int32" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="QualificationID" Type="Int32" />
+          <Property Name="SpecializationID" Type="Int32" />
+          <Property Name="ProuctId" Type="Int32" />
+          <NavigationProperty Name="City" Relationship="Self.FK__AddDoctrs__CityI__75A278F5" FromRole="AddDoctrsDetails" ToRole="City" />
+          <NavigationProperty Name="SelectProduct" Relationship="Self.FK__AddDoctrs__Prouc__787EE5A0" FromRole="AddDoctrsDetails" ToRole="SelectProduct" />
+          <NavigationProperty Name="Qualification" Relationship="Self.FK__AddDoctrs__Quali__76969D2E" FromRole="AddDoctrsDetails" ToRole="Qualification" />
+          <NavigationProperty Name="Specialization" Relationship="Self.FK__AddDoctrs__Speci__778AC167" FromRole="AddDoctrsDetails" ToRole="Specialization" />
+          <NavigationProperty Name="State" Relationship="Self.FK__AddDoctrs__State__73BA3083" FromRole="AddDoctrsDetails" ToRole="State" />
+          <NavigationProperty Name="StateHQ" Relationship="Self.FK__AddDoctrs__State__74AE54BC" FromRole="AddDoctrsDetails" ToRole="StateHQ" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Product__Categor__46B27FE2" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__CityI__75A278F5" FromRole="City" ToRole="AddDoctrsDetails" />
+          <NavigationProperty Name="UserRegestraions" Relationship="Self.FK__UserReges__CityI__5224328E" FromRole="City" ToRole="UserRegestraion" />
+        </EntityType>
+        <EntityType Name="Counrty">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK__Task__CountryId__17F790F9" FromRole="Counrty" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="MruserLogin">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Disctption" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GST" Type="Double" />
+          <Property Name="Sock" Type="Int32" />
+          <Property Name="MRP" Type="Double" />
+          <Property Name="CREATEDDATE" Type="DateTime" Precision="0" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="CategoryId" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Product__Categor__46B27FE2" FromRole="Product" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Qualification">
+          <Key>
+            <PropertyRef Name="QualificationID" />
+          </Key>
+          <Property Name="QualificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QualificationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__Quali__76969D2E" FromRole="Qualification" ToRole="AddDoctrsDetails" />
+        </EntityType>
+        <EntityType Name="SelectProduct">
+          <Key>
+            <PropertyRef Name="ProuctId" />
+          </Key>
+          <Property Name="ProuctId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__Prouc__787EE5A0" FromRole="SelectProduct" ToRole="AddDoctrsDetails" />
+        </EntityType>
+        <EntityType Name="Specialization">
+          <Key>
+            <PropertyRef Name="SpecializationID" />
+          </Key>
+          <Property Name="SpecializationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SpecializationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__Speci__778AC167" FromRole="Specialization" ToRole="AddDoctrsDetails" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__State__73BA3083" FromRole="State" ToRole="AddDoctrsDetails" />
+          <NavigationProperty Name="UserRegestraions" Relationship="Self.FK__UserReges__State__51300E55" FromRole="State" ToRole="UserRegestraion" />
+        </EntityType>
+        <EntityType Name="StateHQ">
+          <Key>
+            <PropertyRef Name="StateHqID" />
+          </Key>
+          <Property Name="StateHqID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AddDoctrsDetails" Relationship="Self.FK__AddDoctrs__State__74AE54BC" FromRole="StateHQ" ToRole="AddDoctrsDetails" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CountryId" Type="Int32" />
+          <NavigationProperty Name="Counrty" Relationship="Self.FK__Task__CountryId__17F790F9" FromRole="Task" ToRole="Counrty" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="TerritoryID" />
+          </Key>
+          <Property Name="TerritoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TerritoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserRegestraion">
+          <Key>
+            <PropertyRef Name="RegId" />
+          </Key>
+          <Property Name="RegId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhomeNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="CityID" Type="Int32" />
+          <NavigationProperty Name="City" Relationship="Self.FK__UserReges__CityI__5224328E" FromRole="UserRegestraion" ToRole="City" />
+          <NavigationProperty Name="State" Relationship="Self.FK__UserReges__State__51300E55" FromRole="UserRegestraion" ToRole="State" />
+        </EntityType>
+        <Association Name="FK__AddDoctrs__CityI__75A278F5">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Prouc__787EE5A0">
+          <End Role="SelectProduct" Type="Self.SelectProduct" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SelectProduct">
+              <PropertyRef Name="ProuctId" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="ProuctId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Quali__76969D2E">
+          <End Role="Qualification" Type="Self.Qualification" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Qualification">
+              <PropertyRef Name="QualificationID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="QualificationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__Speci__778AC167">
+          <End Role="Specialization" Type="Self.Specialization" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Specialization">
+              <PropertyRef Name="SpecializationID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="SpecializationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__State__73BA3083">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddDoctrs__State__74AE54BC">
+          <End Role="StateHQ" Type="Self.StateHQ" Multiplicity="0..1" />
+          <End Role="AddDoctrsDetails" Type="Self.AddDoctrsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StateHQ">
+              <PropertyRef Name="StateHqID" />
+            </Principal>
+            <Dependent Role="AddDoctrsDetails">
+              <PropertyRef Name="StateHqID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__Categor__46B27FE2">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserReges__CityI__5224328E">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="UserRegestraion" Type="Self.UserRegestraion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="UserRegestraion">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__CountryId__17F790F9">
+          <End Role="Counrty" Type="Self.Counrty" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counrty">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserReges__State__51300E55">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="UserRegestraion" Type="Self.UserRegestraion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="UserRegestraion">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MrdDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AddDoctrsDetails" EntityType="Self.AddDoctrsDetail" />
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="Counrties" EntityType="Self.Counrty" />
+          <EntitySet Name="MruserLogins" EntityType="Self.MruserLogin" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Qualifications" EntityType="Self.Qualification" />
+          <EntitySet Name="SelectProducts" EntityType="Self.SelectProduct" />
+          <EntitySet Name="Specializations" EntityType="Self.Specialization" />
+          <EntitySet Name="States" EntityType="Self.State" />
+          <EntitySet Name="StateHQs" EntityType="Self.StateHQ" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="Territories" EntityType="Self.Territory" />
+          <EntitySet Name="UserRegestraions" EntityType="Self.UserRegestraion" />
+          <AssociationSet Name="FK__AddDoctrs__CityI__75A278F5" Association="Self.FK__AddDoctrs__CityI__75A278F5">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Prouc__787EE5A0" Association="Self.FK__AddDoctrs__Prouc__787EE5A0">
+            <End Role="SelectProduct" EntitySet="SelectProducts" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Quali__76969D2E" Association="Self.FK__AddDoctrs__Quali__76969D2E">
+            <End Role="Qualification" EntitySet="Qualifications" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__Speci__778AC167" Association="Self.FK__AddDoctrs__Speci__778AC167">
+            <End Role="Specialization" EntitySet="Specializations" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__State__73BA3083" Association="Self.FK__AddDoctrs__State__73BA3083">
+            <End Role="State" EntitySet="States" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddDoctrs__State__74AE54BC" Association="Self.FK__AddDoctrs__State__74AE54BC">
+            <End Role="StateHQ" EntitySet="StateHQs" />
+            <End Role="AddDoctrsDetails" EntitySet="AddDoctrsDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__Categor__46B27FE2" Association="Self.FK__Product__Categor__46B27FE2">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserReges__CityI__5224328E" Association="Self.FK__UserReges__CityI__5224328E">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="UserRegestraion" EntitySet="UserRegestraions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__CountryId__17F790F9" Association="Self.FK__Task__CountryId__17F790F9">
+            <End Role="Counrty" EntitySet="Counrties" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserReges__State__51300E55" Association="Self.FK__UserReges__State__51300E55">
+            <End Role="State" EntitySet="States" />
+            <End Role="UserRegestraion" EntitySet="UserRegestraions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MrdDBModelStoreContainer" CdmEntityContainer="MrdDBEntities">
+          <EntitySetMapping Name="AddDoctrsDetails">
+            <EntityTypeMapping TypeName="MrdDBModel.AddDoctrsDetail">
+              <MappingFragment StoreEntitySet="AddDoctrsDetails">
+                <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="MoblieNo" ColumnName="MoblieNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateHqID" ColumnName="StateHqID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="QualificationID" ColumnName="QualificationID" />
+                <ScalarProperty Name="SpecializationID" ColumnName="SpecializationID" />
+                <ScalarProperty Name="ProuctId" ColumnName="ProuctId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="MrdDBModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="MrdDBModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="MrdDBModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Counrties">
+            <EntityTypeMapping TypeName="MrdDBModel.Counrty">
+              <MappingFragment StoreEntitySet="Counrty">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MruserLogins">
+            <EntityTypeMapping TypeName="MrdDBModel.MruserLogin">
+              <MappingFragment StoreEntitySet="MruserLogin">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="MrdDBModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Disctption" ColumnName="Disctption" />
+                <ScalarProperty Name="GST" ColumnName="GST" />
+                <ScalarProperty Name="Sock" ColumnName="Sock" />
+                <ScalarProperty Name="MRP" ColumnName="MRP" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qualifications">
+            <EntityTypeMapping TypeName="MrdDBModel.Qualification">
+              <MappingFragment StoreEntitySet="Qualification">
+                <ScalarProperty Name="QualificationID" ColumnName="QualificationID" />
+                <ScalarProperty Name="QualificationName" ColumnName="QualificationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectProducts">
+            <EntityTypeMapping TypeName="MrdDBModel.SelectProduct">
+              <MappingFragment StoreEntitySet="SelectProduct">
+                <ScalarProperty Name="ProuctId" ColumnName="ProuctId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Specializations">
+            <EntityTypeMapping TypeName="MrdDBModel.Specialization">
+              <MappingFragment StoreEntitySet="Specialization">
+                <ScalarProperty Name="SpecializationID" ColumnName="SpecializationID" />
+                <ScalarProperty Name="SpecializationName" ColumnName="SpecializationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="MrdDBModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StateHQs">
+            <EntityTypeMapping TypeName="MrdDBModel.StateHQ">
+              <MappingFragment StoreEntitySet="StateHQ">
+                <ScalarProperty Name="StateHqID" ColumnName="StateHqID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="MrdDBModel.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="Emial" ColumnName="Emial" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Territories">
+            <EntityTypeMapping TypeName="MrdDBModel.Territory">
+              <MappingFragment StoreEntitySet="Territory">
+                <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+                <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRegestraions">
+            <EntityTypeMapping TypeName="MrdDBModel.UserRegestraion">
+              <MappingFragment StoreEntitySet="UserRegestraion">
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhomeNumber" ColumnName="PhomeNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
