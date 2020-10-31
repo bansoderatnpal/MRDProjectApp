@@ -8,10 +8,15 @@ namespace MyGitProj.ServiceLayer
 {
     public class _IAllRepositoryBusinessLogic : IAllRepository
     {
-        MrdDBEntities db = new MrdDBEntities();
-        public List<UserRegestraion> GetAllRegList()
+        public _IAllRepositoryBusinessLogic(int i)
         {
-            List<UserRegestraion> list = db.UserRegestraions.ToList();
+
+        }
+        MrdDBEntities db = new MrdDBEntities();
+        public IEnumerable<UserRegestraion> GetAllRegList()
+        {
+            List<UserRegestraion> list = new List<UserRegestraion>();
+            list = db.UserRegestraions.ToList();
             return list;
         }
     }

@@ -22,8 +22,8 @@ namespace MyGitProj.DataAccessLayer
         public string Email { get; set; }
         public string Password { get; set; }
         public string ZipCode { get; set; }
-        public Nullable<int> StateId { get; set; }
-        public Nullable<int> CityId { get; set; }
+        public int StateId { get; set; }
+        public int CityId { get; set; }
     
         public virtual Citie_table Citie_table { get; set; }
         public virtual State_table State_table { get; set; }

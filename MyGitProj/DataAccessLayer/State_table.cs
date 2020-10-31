@@ -17,12 +17,15 @@ namespace MyGitProj.DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public State_table()
         {
+            this.Citie_table = new HashSet<Citie_table>();
             this.UserRegestraions = new HashSet<UserRegestraion>();
         }
     
         public int StateId { get; set; }
         public string StateName { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Citie_table> Citie_table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserRegestraion> UserRegestraions { get; set; }
     }

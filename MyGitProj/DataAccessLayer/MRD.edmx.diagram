@@ -23,11 +23,12 @@
         <AssociationConnector Association="MrdDBModel.FK__AddDoctrs__State__74AE54BC" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__Product__Categor__46B27FE2" ManuallyRouted="false" />
         <AssociationConnector Association="MrdDBModel.FK__Task__CountryId__17F790F9" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="MrdDBModel.Citie_table" Width="1.5" PointX="3.75" PointY="11.25" />
-        <EntityTypeShape EntityType="MrdDBModel.State_table" Width="1.5" PointX="7.75" PointY="8.875" />
-        <EntityTypeShape EntityType="MrdDBModel.UserRegestraion" Width="1.5" PointX="10.625" PointY="9.25" />
-        <AssociationConnector Association="MrdDBModel.FK__UserReges__CityI__6442E2C9" />
-        <AssociationConnector Association="MrdDBModel.FK__UserReges__State__634EBE90" />
+        <EntityTypeShape EntityType="MrdDBModel.Citie_table" Width="1.5" PointX="10.625" PointY="9.625" />
+        <EntityTypeShape EntityType="MrdDBModel.State_table" Width="1.5" PointX="8.375" PointY="9.75" />
+        <EntityTypeShape EntityType="MrdDBModel.UserRegestraion" Width="1.5" PointX="12.875" PointY="9" />
+        <AssociationConnector Association="MrdDBModel.FK__Citie_tab__State__6BE40491" />
+        <AssociationConnector Association="MrdDBModel.FK__UserReges__CityI__6FB49575" />
+        <AssociationConnector Association="MrdDBModel.FK__UserReges__State__6EC0713C" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

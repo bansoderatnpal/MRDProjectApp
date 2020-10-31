@@ -24,6 +24,7 @@ namespace MyGitProj.DataAccessLayer
         public string CityName { get; set; }
         public Nullable<int> States { get; set; }
     
+        public virtual State_table State_table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserRegestraion> UserRegestraions { get; set; }
     }

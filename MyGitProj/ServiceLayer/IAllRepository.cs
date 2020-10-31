@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using MyGitProj.DataAccessLayer;
 namespace MyGitProj.ServiceLayer
 {
-    interface IAllRepository
+    public interface IAllRepository
     {
-        List<UserRegestraion> GetAllRegList();
+        IEnumerable<UserRegestraion> GetAllRegList();
 
     }
 }
