@@ -202,7 +202,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceLayer\Demo.cs" />
     <Compile Include="ServiceLayer\IAllRepository.cs" />
     <Compile Include="ServiceLayer\_IAllRepositoryBusinessLogic.cs" />
     <Compile Include="DomainViewModel\AdminLogin.cs" />
